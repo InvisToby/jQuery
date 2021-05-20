@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>jQuery challenges</title>
+        <script src="JS/jquery-3.6.0.min.js"></script>
+    </head>
+   
+    <body>
+
+        <h2>challenge 25</h2>
+        <p>click here</p>
+
+        <p> Or here</p>
+
+        <p class="catchMe">Catch me while you can</p>
+        <script>
+            // Event setup using a convenience method
+            $( "p" ).click(function() {
+                console.log( "Paragraph clicked" );
+            });
+
+            $( "p" ).on({
+            "mouseover": function() { console.log( "hovering" ); }
+            });
+
+            // Instantaneously toggle the display of all paragraphs
+            $( ".catchMe" ).toggle("10000");
+
+            $( ".catchMe" ).show( 1250 );
+        </script>   
+
+    </body>
+
+</html>
+
